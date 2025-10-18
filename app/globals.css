@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: hsl(238, 50%, 90%);
+  --color-secondary: hsl(238, 50%, 10%);
+  --color-tertiary: hsl(298, 80%, 20%);
+  --color-accent: hsl(178, 80%, 20%);
+  --shadow: 0px 2px 2px oklch(0 0 0 / 0.2), 0px 4px 4px oklch(0 0 0 / 0.1);
+  --rdp-selected-border: var(--color-primary)
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --color-primary: hsl(238, 50%, 10%);
+  --color-secondary: hsl(238, 50%, 90%);
+  --color-tertiary: hsl(298, 80%, 80%);
+  --color-accent: hsl(178, 80%, 80%);
+  --shadow: 0px 2px 2px oklch(100% 0 0 / 0.2), 0px 4px 4px oklch(100% 0 0 / 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+}
+
+button {
+  padding: 0;
+  margin: 0;
+}
+
+.text-btn {
+  color: var(--color-primary);
+  background-color: var(--color-tertiary);
+}
+
+.btn {
+  padding: 3px 8px;
+  border-radius: 10px;
+  color: var(--color-primary);
+  background-color: var(--color-tertiary);
+}
+
+.accent-color {
+  color: var(--color-accent);
+}
+
+.accent-bg {
+  background-color: var(--color-accent);
+}
+
+.main-color {
+  color: var(--color-secondary);
+}
+
+.main-bg {
+  background-color: var(--color-primary);
+}
+
+.combined {
+  box-shadow: var(--shadow);
+}
+
+/* tailwind config or global css */
+.dropdown-root select {
+  max-height: 200px;
+  /* adjust for mobile */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent) var(--color-tertiary);
 }
