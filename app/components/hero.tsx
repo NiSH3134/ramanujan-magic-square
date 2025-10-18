@@ -31,7 +31,9 @@ const Hero = forwardRef<HTMLElement, HeroProps>((props, ref) => {
     11: [0, 3, 12, 15],
     12: [4, 8, 7, 11],
     13: [1, 2, 13, 14],
-    14: [5, 6, 9, 10]
+    14: [1, 4, 11, 14],
+    15: [2, 7, 8, 13],
+    16: [5, 6, 9, 10],
   };
 
 
@@ -41,7 +43,7 @@ const Hero = forwardRef<HTMLElement, HeroProps>((props, ref) => {
     endHighlightInterval();
     interval = setInterval(() => {
       setHighlightIndex(oldIndex => {
-        if (oldIndex >= 14) { endHighlightInterval(); return 0; }
+        if (oldIndex >= 16) { endHighlightInterval(); return 0; }
         return oldIndex + 1;
       });
     }, 2 * 1000); // 5 seconds
