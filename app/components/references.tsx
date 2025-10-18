@@ -124,10 +124,7 @@ const References = forwardRef<HTMLElement, ReferenceProps>((props, ref) => {
             <strong>Validate the magic square:</strong> Ensure each row, column, and diagonal equals the magic constant.
           </li>
           <li style={{ marginBottom: "0.9em" }}>
-            <strong>Magic constant formula:</strong> Magic Constant = A + B + C + D + 10
-          </li>
-          <li>
-            <strong>Display the square:</strong> Render the calculated 4×4 grid in the UI.
+            <strong>Magic constant formula:</strong> Magic Constant = A + B + C + D
           </li>
         </ul>
       </div>
