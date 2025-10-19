@@ -16,9 +16,7 @@ export default function CustomDatePicker({ selectedDate, onDateChange }: CustomD
   const [isOpen, setIsOpen] = useState(false);
   const inputRef = useRef<HTMLDivElement>(null);
 
-  const currentYear = new Date().getFullYear();
 
-  // Close picker if clicked outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (inputRef.current && !inputRef.current.contains(event.target as Node)) {
@@ -29,7 +27,7 @@ export default function CustomDatePicker({ selectedDate, onDateChange }: CustomD
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Parse input value in dd/MMM/yyyy or dd/MM/yyyy
+
   const parseDateInput = (value: string) => {
     const dmyRegex = /^(\d{1,2})\/([a-zA-Z]{3})\/(\d{4})$/;
     const dmRegex = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
@@ -64,7 +62,6 @@ export default function CustomDatePicker({ selectedDate, onDateChange }: CustomD
     if (onDateChange) onDateChange(date);
   };
 
-  // same input logic as before, just replace setSelected(date) with:
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const date = parseDateInput(e.target.value);
     if (date) {

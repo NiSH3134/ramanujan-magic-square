@@ -1,4 +1,3 @@
-// utils/magicSquare.ts
 export function generateMagicSquare(dob: Date): { square: number[][], magicConstant: number } {
   const A = dob.getDate();
   const B = dob.getMonth() + 1; // JS months 0-11
@@ -6,9 +5,8 @@ export function generateMagicSquare(dob: Date): { square: number[][], magicConst
   const D = Math.floor(dob.getFullYear() % 100);
 
   // Magic constant for 4x4
-  const S = A + B + C + D; // 34 is arbitrary offset to make sums realistic
+  const S = A + B + C + D;
 
-  // Example 4x4 square generation (Ramanujan inspired)
   const square: number[][] = [
     [A, B, C, D],
     [D + 1, C - 1, B - 3, A + 3],

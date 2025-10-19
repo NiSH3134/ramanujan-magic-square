@@ -13,7 +13,6 @@ export const Header = ({ onHeroClick, onReferencesClick }: HeaderProps) => {
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Initialize theme
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -48,7 +47,7 @@ export const Header = ({ onHeroClick, onReferencesClick }: HeaderProps) => {
 
   return (
     <header className="combined main-color main-bg sticky top-0 z-50 flex items-center justify-between p-4">
-      {/* Logo */}
+
       <div className="logo text-lg font-bold">
         <Link href="/">Ramanujan Magic Square</Link>
       </div>

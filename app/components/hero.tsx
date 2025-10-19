@@ -4,7 +4,7 @@ import CustomDatePicker from './custom-date-picker';
 import { generateMagicSquare } from '../utils/generate-magic-square';
 
 type HeroProps = {
-  // optional: you can pass a callback if needed
+
 };
 
 
@@ -46,7 +46,7 @@ const Hero = forwardRef<HTMLElement, HeroProps>((props, ref) => {
         if (oldIndex >= 16) { endHighlightInterval(); return 0; }
         return oldIndex + 1;
       });
-    }, 2 * 1000); // 5 seconds
+    }, 2 * 1000); // 2 seconds
   }
 
   const endHighlightInterval = () => {
@@ -81,12 +81,12 @@ const Hero = forwardRef<HTMLElement, HeroProps>((props, ref) => {
         Select Your DOB
       </h1>
 
-      {/* Picker container fixes width/padding */}
+
       <div className="w-full md:w-80">
         <CustomDatePicker selectedDate={dob} onDateChange={handleDateChange} />
       </div>
 
-      {/* Magic Square */}
+
       {magicSquare.length > 0 ? (
         <div className="mt-8 grid grid-cols-4 grid-rows-4 gap-2 md:gap-4">
           {magicSquare.flat().map((val, idx) => (

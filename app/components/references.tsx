@@ -2,7 +2,7 @@
 import React, { forwardRef } from 'react';
 
 type ReferenceProps = {
-  // optional: you can pass a callback if needed
+
 };
 
 const References = forwardRef<HTMLElement, ReferenceProps>((props, ref) => {
@@ -32,7 +32,7 @@ const References = forwardRef<HTMLElement, ReferenceProps>((props, ref) => {
         References & Resources
       </h2>
 
-      {/* Resource Links */}
+
       <div className="flex flex-col md:flex-row gap-4 md:gap-8 w-full max-w-5xl justify-center flex-wrap">
         {resources.map((res, idx) => (
           <a
@@ -47,7 +47,7 @@ const References = forwardRef<HTMLElement, ReferenceProps>((props, ref) => {
         ))}
       </div>
 
-      {/* YouTube Video Embed */}
+
       <div className="w-full max-w-3xl aspect-video shadow-[var(--shadow)] rounded-lg overflow-hidden">
         <iframe
           width="100%"
@@ -61,7 +61,7 @@ const References = forwardRef<HTMLElement, ReferenceProps>((props, ref) => {
         ></iframe>
       </div>
 
-      {/* Calculation Logic */}
+
       <div className=' max-w-3xl p-8 rounded-2xl bg-[var(--color-secondary)] text-[var(--color-primary)]' style={{
       }}>
         <h2 style={{

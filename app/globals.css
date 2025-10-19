@@ -65,10 +65,8 @@ button {
   box-shadow: var(--shadow);
 }
 
-/* tailwind config or global css */
 .dropdown-root select {
   max-height: 200px;
-  /* adjust for mobile */
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--color-accent) var(--color-tertiary);
