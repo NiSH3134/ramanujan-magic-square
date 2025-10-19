@@ -113,8 +113,7 @@ export default function CustomDatePicker({ selectedDate, onDateChange }: CustomD
             mode="single"
             selected={selected}
             onSelect={handleDaySelect}
-            startMonth={new Date(1800, 0)}
-            endMonth={new Date()}
+            startMonth={new Date(1700, 0)}
             captionLayout="dropdown"
             classNames={{
               root: `${classNames.root} p-4`,
